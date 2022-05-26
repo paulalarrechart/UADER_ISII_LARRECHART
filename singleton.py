@@ -41,9 +41,9 @@ if __name__ == "__main__":
     s2 = Singleton()
 
     if id(s1) == id(s2):
-        print("Singleton works, both variables contain the same instance.")
+        print("Singleton funciona, ambas variables contienen la misma instancia")
         print(s1.getid())
     else:
-        print("Singleton failed, variables contain different instances.")
+        print("Singleton falló, las variables contienen diferentes instancia.")
 
 

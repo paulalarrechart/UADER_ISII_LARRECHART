@@ -27,7 +27,7 @@ class RealSubject(Subject):
     """
 
     def request(self) -> None:
-        print("RealSubject: Handling request.")
+        print("RealSubject: solicitud de manejo")
 
 
 class Proxy(Subject):
@@ -51,11 +51,11 @@ class Proxy(Subject):
             self.log_access()
 
     def check_access(self) -> bool:
-        print("Proxy: Checking access prior to firing a real request.")
+        print("Proxy: Comprobación de acceso antes de disparar una solicitud real")
         return True
 
     def log_access(self) -> None:
-        print("Proxy: Logging the time of request.", end="")
+        print("Proxy: Registro de la hora de la solicitud.", end="")
 
 
 def client_code(subject: Subject) -> None:
@@ -75,7 +75,7 @@ def client_code(subject: Subject) -> None:
 
 
 if __name__ == "__main__":
-    print("Client: Executing the client code with a real subject:")
+    print("Cliente: Ejecutando el código del cliente con un asunto real:")
     real_subject = RealSubject()
     client_code(real_subject)
 
